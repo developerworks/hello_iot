@@ -21,8 +21,16 @@ defmodule Fw.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Fw, []},
-     applications: [:logger]]
+    [
+      mod: {Fw, []},
+      applications: [
+        :logger,
+        :nerves_interim_wifi,
+        :nerves_firmware_http,
+        :nerves_uart,
+        :ui
+      ]
+    ]
   end
 
   def deps do
@@ -30,6 +38,7 @@ defmodule Fw.Mixfile do
       {:nerves, "~> 0.3.0"},
       {:nerves_interim_wifi, github: "nerves-project/nerves_interim_wifi"},
       {:nerves_firmware_http, github: "nerves-project/nerves_firmware_http"},
+      {:nerves_uart, "~> 0.1.1"},
       {:ui, in_umbrella: true}
     ]
   end
