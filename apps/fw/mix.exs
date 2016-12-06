@@ -26,11 +26,18 @@ defmodule Fw.Mixfile do
   end
 
   def deps do
-    [{:nerves, "~> 0.3.0"}]
+    [
+      {:nerves, "~> 0.3.0"},
+      {:nerves_interim_wifi, github: "nerves-project/nerves_interim_wifi"},
+      {:nerves_firmware_http, github: "nerves-project/nerves_firmware_http"},
+      {:ui, in_umbrella: true}
+    ]
   end
 
   def system(target) do
-    [{:"nerves_system_#{target}", ">= 0.0.0"}]
+    [
+      {:"nerves_system_#{target}", github: "nerves-project/nerves_system_rpi3"}
+    ]
   end
 
   def aliases do
