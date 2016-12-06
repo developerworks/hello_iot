@@ -8,7 +8,7 @@ use Mix.Config
 # Configures the endpoint
 config :ui, Ui.Endpoint,
   url: [host: "0.0.0.0"],
-  secret_key_base: "nDhBC8th6GclzbDIgPIcn9BWjp4qTnVJ8oC6ap2oNlyW2x3MV1FnI8f/TCU1Euju",
+  secret_key_base: "KR3a7rYDjpQFAjW6a17MIdgYmbYfom619GR0mUQVz38GXd4Z4GDONOHE4JFol0kZ",
   render_errors: [view: Ui.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Ui.PubSub,
            adapter: Phoenix.PubSub.PG2]
