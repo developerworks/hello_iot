@@ -28,7 +28,8 @@ defmodule Fw.Mixfile do
         :nerves_interim_wifi,
         :nerves_firmware_http,
         :nerves_uart,
-        :ui
+        :ui,
+        :nerves_ntp
       ]
     ]
   end
@@ -39,7 +40,8 @@ defmodule Fw.Mixfile do
       {:nerves_interim_wifi, github: "nerves-project/nerves_interim_wifi"},
       {:nerves_firmware_http, github: "nerves-project/nerves_firmware_http"},
       {:nerves_uart, "~> 0.1.1"},
-      {:ui, in_umbrella: true}
+      {:ui, in_umbrella: true},
+      {:nerves_ntp, "~> 0.1.1"}
     ]
   end
 
