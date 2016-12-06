@@ -12,3 +12,15 @@ config :ui, Ui.Endpoint,
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Ui.PubSub,
            adapter: Phoenix.PubSub.PG2]
+
+
+# ------------
+# 日志
+# ------------
+
+config :logger, :console,
+  level: :debug,
+  format: "$date $time $metadata[$level] $message\n",
+  handle_sasl_reports: true,
+  handle_otp_reports: true,
+  utc_log: true
