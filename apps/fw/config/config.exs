@@ -4,8 +4,8 @@ use Mix.Config
 # Phoenix 端点
 # ------------
 config :ui, Ui.Endpoint,
-  http: [port: 80],
-  url: [host: "0.0.0.0", port: 80],
+  http: [port: 8080],
+  url: [host: "0.0.0.0", port: 8080],
   secret_key_base: "9w9MI64d1L8mjw+tzTmS3qgJTJqYNGJ1dNfn4S/Zm6BbKAmo2vAyVW7CgfI3CpII",
   root: Path.dirname(__DIR__),
   server: true,
@@ -32,7 +32,16 @@ config :logger, :console,
 # 并且该设置信息需要存储到持久存储中, 比如SQLITE数据库或配置文件.
 
 config :fw, :eth0,
-  opts: [mode: "dhcp"]
+  mode: "dhcp"
+
+config :fw, :eth0_static,
+  mode: "static",
+  ip: "192.168.0.201",
+  router: "192.168.0.1",
+  mask: "24",
+  subnet: "255.255.255.0",
+  dns: ["192.168.0.1","8.8.8.8","8.8.4.4"],
+  hostname: "nerves-rpi3"
 
 config :fw, :wlan0,
   ssid: "gx888888",
