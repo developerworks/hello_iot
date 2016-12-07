@@ -25,6 +25,7 @@ defmodule Fw.Mixfile do
       mod: {Fw, []},
       applications: [
         :logger,
+        :nerves_networking,
         :nerves_interim_wifi,
         :nerves_firmware_http,
         :nerves_uart,
@@ -37,6 +38,7 @@ defmodule Fw.Mixfile do
   def deps do
     [
       {:nerves, "~> 0.3.0"},
+      {:nerves_networking, github: "nerves-project/nerves_networking"},
       {:nerves_interim_wifi, github: "nerves-project/nerves_interim_wifi"},
       {:nerves_firmware_http, github: "nerves-project/nerves_firmware_http"},
       {:nerves_uart, "~> 0.1.1"},
