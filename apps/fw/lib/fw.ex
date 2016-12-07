@@ -23,4 +23,17 @@ defmodule Fw do
     Nerves.InterimWiFi.setup "wlan0", opts
   end
 
+  @doc """
+  格式化显示已启动的应用程序
+  """
+  def started_applications do
+    Application.started_applications |> Enum.each(fn(x) -> IO.puts "#{inspect x}" end)
+  end
+
+  @doc """
+  重启Respberry Pi
+  """
+  def reboot do
+    Nerves.Firmware.reboot
+  end
 end
