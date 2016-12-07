@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -T _images/rpi3/fw.fw "http://192.168.0.200:8988/firmware" -H "Content-Type: application/x-firmware" -H "X-Reboot: true"
