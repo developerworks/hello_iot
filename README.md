@@ -1,3 +1,8 @@
+> 看了文章, 有兴趣的同学可以联系我一起搞点事情做, 比如开发一个IoT的网关应用. 满足下面条件的都可以联系我.
+> - 有C下面的驱动开发经验.
+> - 你对Erlang或Elixir比较熟悉, 有Erlang/Elixir的项目经验.
+> - 你有硬件开发相关的经验.
+
 ## 原材料
 
 Respberry Pi 3 Model B 一个
@@ -113,7 +118,7 @@ config :logger, :console,
 
 # 网络配置
 config :fw, :eth0,
-  opts: [mode: "dhcp"]
+  mode: "dhcp"
 
 config :fw, :wlan0,
   ssid: "gx888888",
