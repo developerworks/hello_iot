@@ -1,20 +1,27 @@
 ## 原材料
 
 Respberry Pi 3 Model B 一个
+
 ![img_1564](https://cloud.githubusercontent.com/assets/725190/20994915/77b1fdd2-bd2e-11e6-81b7-8e744488c5ce.JPG)
+
 ![img_1565](https://cloud.githubusercontent.com/assets/725190/20994922/7d915d88-bd2e-11e6-846e-49d2bf4d10db.JPG)
 
 HDMI 转 DVI显示输出数据线一根
+
 ![img_1568](https://cloud.githubusercontent.com/assets/725190/20994939/9edd477c-bd2e-11e6-8646-860665bd4e92.JPG)
 
 USB 电源一个
+
 ![img_1567](https://cloud.githubusercontent.com/assets/725190/20994927/8bfe92f0-bd2e-11e6-8080-80c80e6008c6.JPG)
 
 16G SD卡一张
+
 ![img_1566](https://cloud.githubusercontent.com/assets/725190/20994926/85e6d1e8-bd2e-11e6-849a-2be79698dc88.JPG)
 
 SD 卡读卡器
+
 ![img_1569](https://cloud.githubusercontent.com/assets/725190/20994934/95802442-bd2e-11e6-8d38-478ad22af47c.JPG)
+
 ![img_1570](https://cloud.githubusercontent.com/assets/725190/20994937/99d2fff6-bd2e-11e6-9fdc-a61cb0e7a5d2.JPG)
 
 
@@ -229,4 +236,4 @@ export NERVES_SYSTEM_CACHE=local
 https://github.com/developerworks/hello_iot
 
 可以Clone下来仔细看Git日志, 详细说明了如何从从头开始配置一个新的Nerves项目.
-![img_1564](https://cloud.githubusercontent.com/assets/725190/20994915/77b1fdd2-bd2e-11e6-81b7-8e744488c5ce.JPG)
+
