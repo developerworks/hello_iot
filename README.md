@@ -33,10 +33,10 @@ SD 卡读卡器
 
 ```
 # 创建伞状项目
-mix new hello_phoenix --umbrella
+mix new hello_iot --umbrella
 
 # 创建子项目
-cd hello_phoenix/apps
+cd hello_iot/apps
 # 创建固件子项目
 mix nerves.new fw --target rpi3
 # 前端显示界面项目
@@ -48,7 +48,7 @@ mix phoenix.new ui --no-ecto --no-brunch
 > 修改固件配置文件, 把 Application 添加到启动列表中
 
 ```
-# hello_phoenix/apps/fw/mix.exs
+# hello_iot/apps/fw/mix.exs
 
 def application do
   [mod: {Fw, []},
@@ -59,7 +59,7 @@ end
 > 启动网络
 
 ```
-# hello_phoenix/apps/fw/lib/fw.ex
+# hello_iot/apps/fw/lib/fw.ex
 
 defmodule Fw do
   use Application
@@ -87,7 +87,7 @@ defmodule Fw do
 end
 ```
 
-> 修改配置文件 `hello_phoenix/apps/fw/config/config.exs`, 注意把监听地址从`localhost`,修改为 `0.0.0.0`, 以便让局域网中的其他机器能够访问.
+> 修改配置文件 `hello_iot/apps/fw/config/config.exs`, 注意把监听地址从`localhost`,修改为 `0.0.0.0`, 以便让局域网中的其他机器能够访问.
 
 ```
 use Mix.Config
@@ -142,7 +142,7 @@ Generated nerves_toolchain_arm_unknown_linux_gnueabihf app
 
 > 依赖配置
 
-注意, 现在需要使用 0.7 的系统, 0.6.1 的系统WIFI驱动是有问题的, 为此, 我们需要修改`hello_phoenix/apps/fw/mix.exs` 配置文件的 `deps` 和 `system` 为如下:
+注意, 现在需要使用 0.7 的系统, 0.6.1 的系统WIFI驱动是有问题的, 为此, 我们需要修改`hello_iot/apps/fw/mix.exs` 配置文件的 `deps` 和 `system` 为如下:
 
 ```
 def deps do
@@ -169,7 +169,7 @@ def application do
 end
 ```
 
-> 修改`hello_phoenix/app/fw/mix.exs`中的依赖路径和构建路径
+> 修改`hello_iot/app/fw/mix.exs`中的依赖路径和构建路径
 
 ```
 def project do
@@ -190,14 +190,14 @@ end
 > UI 测试, 往设备烧之前可以先在主机系统上测试一下, 没问题后再制作固件并烧到Pi上.
 
 ```
-cd hello_phoenix/app/ui
+cd hello_iot/app/ui
 iex -S mix phoenix.server
 ```
 
-> 制作固件, 固件的制作需要切换到 `hello_phoenix/app/fw` 去执行, 切记不要在伞状项目 `hello_phoenix` 的根目录运行.
+> 制作固件, 固件的制作需要切换到 `hello_iot/app/fw` 去执行, 切记不要在伞状项目 `hello_iot` 的根目录运行.
 
 ```
-cd hello_phoenix/app/fw
+cd hello_iot/app/fw
 mix deps.get
 mix firmware
 mix firmware.burn
