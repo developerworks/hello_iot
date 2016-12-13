@@ -1,6 +1,12 @@
 use Mix.Config
 
 # ------------
+# 增加覆盖目录, 覆盖默认系统文件
+# ------------
+config :nerves, :firmware,
+  rootfs_additions: "config/rootfs-additions"
+
+# ------------
 # Phoenix 端点
 # ------------
 config :ui, Ui.Endpoint,
