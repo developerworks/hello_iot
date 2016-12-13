@@ -15,7 +15,7 @@
   "nerves_firmware": {:git, "https://github.com/nerves-project/nerves_firmware.git", "241a12694bd3bc2b4df8cbb7e0f0beaeff075b1c", []},
   "nerves_firmware_http": {:git, "https://github.com/nerves-project/nerves_firmware_http.git", "cc2cb110b0587a482d454175916dc597d62c4bfa", []},
   "nerves_interim_wifi": {:git, "https://github.com/nerves-project/nerves_interim_wifi.git", "32e848274571e328ebd7155848cc28d020938429", []},
-  "nerves_lora_gateway": {:git, "https://github.com/developerworks/nerves_lora_gateway.git", "b8e8222a96e1ec22a33c8790c4481dfa81699a85", []},
+  "nerves_lora_gateway": {:git, "https://github.com/developerworks/nerves_lora_gateway.git", "f2973df980c9f9d238b7a668a1a6a6501b406ca3", []},
   "nerves_neopixel": {:hex, :nerves_neopixel, "0.3.0", "afd9c906896f0b39a2bea61cf01afe304d550bc74c789a5e872d64df5e1ae559", [:make, :mix], [{:elixir_make, "~> 0.3.0", [hex: :elixir_make, optional: false]}]},
   "nerves_network_interface": {:hex, :nerves_network_interface, "0.3.2", "e7450f7eccd7387ceebee6096a0646bcdc0dd4aa77077e5fa81f6767da9b77af", [:make, :mix], [{:elixir_make, "~> 0.3", [hex: :elixir_make, optional: false]}]},
   "nerves_networking": {:git, "https://github.com/nerves-project/nerves_networking.git", "e4398e6be3b02f912f96dec6e13f0ec36d6d1a31", []},
